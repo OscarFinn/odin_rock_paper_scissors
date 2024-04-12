@@ -7,7 +7,7 @@ function getComputerChoice() {
     return actions[rand];
 }
 function getPlayerChoice() {
-    let choice = toLowerCase(prompt("Rock,Paper or Scissors?"));
+    let choice = prompt("Rock, Paper or Scissors?").toLowerCase();
     if (choice === "rock"){
         return actions[0];
     }
@@ -58,7 +58,7 @@ function playGame() {
     for(let i=0;i<5;i++){
         let playerChoice = getPlayerChoice();
         let computerChoice = getComputerChoice();
-        playRound();
+        playRound(playerChoice,computerChoice);
     }
     if (playerScore===computerScore) {
         console.log("Draw");
