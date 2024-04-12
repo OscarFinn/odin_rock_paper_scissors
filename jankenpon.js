@@ -66,3 +66,4 @@ function playGame() {
         console.log("Computer Wins");
     }
 }
+playGame();
