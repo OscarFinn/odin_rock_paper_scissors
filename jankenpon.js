@@ -54,3 +54,15 @@ function playRound(playerSelection,computerSelection) {
     }
     console.log(`The current score is: ${playerScore}-${computerScore}`);
 }
+function playGame() {
+    for(let i=0;i<5;i++){
+        playRound();
+    }
+    if (playerScore===computerScore) {
+        console.log("Draw");
+    } else if (playerScore>computerScore) {
+        console.log("Player Wins");
+    } else {
+        console.log("Computer Wins");
+    }
+}
